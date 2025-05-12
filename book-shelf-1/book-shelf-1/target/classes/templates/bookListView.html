@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>All Books</title>
+</head>
+<body>
+    <h1>All Books</h1>
+
+    <ul>
+        <!-- Loop through the bookMap and display each book's title and author -->
+        <li th:each="entry : ${bookMap}">
+            <strong th:text="${entry.key}">Book Title</strong> by 
+            <em th:text="${entry.value}">Author Name</em>
+        </li>
+    </ul>
+
+</body>
+</html>

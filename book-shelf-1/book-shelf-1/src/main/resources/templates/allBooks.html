@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>All Books</title>
+</head>
+<body>
+    <h1>All Books</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>View</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Iterate over the Map of books -->
+            <tr th:each="entry : ${booklist}">
+                <td th:text="${entry.key}">1</td>
+                <td th:text="${entry.value.name}">Book Title</td>
+                <td th:text="${entry.value.author}">Author Name</td>
+                
+                <td>
+                    <a th:href="@{'/viewBook'(id=${entry.key})}">View</a> |
+                    <a th:href="@{'/editBook'(id=${entry.key})}">Edit</a> |
+                    <a th:href="@{'/deleteBook'(id=${entry.key})}" 
+                       onclick="return confirm('Are you sure you want to delete this book?');">Delete</a>
+                </td>
+                
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

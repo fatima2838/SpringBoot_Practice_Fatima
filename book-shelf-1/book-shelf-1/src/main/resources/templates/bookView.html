@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Book List</title>
+</head>
+<body>
+    <h1>List of Books</h1>
+
+    <!-- Loop through the bookList and display each book's title and author -->
+    <ul>
+        <li th:each="book : ${bookList}">
+            <strong th:text="${book.name}">Book Title</strong> by 
+            <em th:text="${book.author}">Author Name</em>
+        </li>
+    </ul>
+</body>
+</html>
