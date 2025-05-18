@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.example.Basic_auth_demo1.BasicAuthDemo1ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.011 s -- in com.example.Basic_auth_demo1.BasicAuthDemo1ApplicationTests

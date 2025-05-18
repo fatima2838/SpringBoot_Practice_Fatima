@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin Home</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            color: purple;
+            text-align: center;
+            padding-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome, <span th:text="${username}">User</span>!</h1>
+    <h4><span th:text="${role}"></span>!</h4>
+    <p>This is your home page.</p>
+</body>
+</html>
